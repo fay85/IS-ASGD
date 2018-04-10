@@ -10,6 +10,12 @@ the last two datasets are small-scale and relative dense. IS-ASGD shows differen
 
 copy these datasets to 'data' folder and unzip
 
+## Preparation
+1. The cal_xnorm.py in script folder is used to calculate the Lipschtz constant for data sample.
+2. The cal_random.py in script folder is used to generate random data segmentation.
+3. Program reads in norm file and generate sampling distribution at the beginning of each epoch.
+4. In fact, the sampling sequence can be generated only once and randomly shuffled for each epoch.
+
 ## Run Command
 Use the run scripts in 'script' folder
 
