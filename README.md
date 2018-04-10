@@ -1,7 +1,7 @@
 # IS-ASGD
 This is an implementation of importance aampling for ASGD, namely, IS-ASGD.
-We recommend the following datasets which is sufficiently large and sparse.
-
+We recommend the following datasets, the first two datasets are sufficiently large and sparse, 
+the last two datasets are small-scale and relative dense. IS-ASGD shows different performance on them.
 ## Data Preparation
 1. https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/kdda.bz2
 2. https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/kddb.bz2
