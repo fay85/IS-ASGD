@@ -171,7 +171,7 @@ int main(int argc, char** argv) {
         }
 	  }
   }
-  init_thread_dataset();
+  init_thread_dataset(nepochs);
   unsigned *degs = new unsigned[nfeats];
   printf("Sample dimensions %lu, nthreads %d\n", nfeats, nthreads);
   for (size_t i = 0; i < nfeats; i++) {

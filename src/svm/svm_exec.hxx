@@ -221,6 +221,7 @@ namespace svm {
 	  // calculate which chunk of examples we work on
 	  size_t start = hogwild::GetStartIndex(exampsvec.size, tid, total); 
 	  size_t end = hogwild::GetEndIndex(exampsvec.size, tid, total);
+	  size_t len=end-start;
 	  // optimize for const pointers 
 	  size_t *perm = task.block->perm.values;
 	  SVMExample const * const examps = exampsvec.values;
@@ -237,8 +238,7 @@ namespace svm {
 		tmp.index = new int[m->weights.size];
 	  }
 
-	  //std::cout<<"tid "<<tid<<" update model with length "<<end-start<<std::endl;
-	  for (unsigned i = 0; i < end-start; i++) {
+	  for (unsigned i = (eidx-1)*len; i < eidx*len; i++) {
 	    if((svrg==0)||(eidx==1)){
 			if(use_log==0){
 		      	ModelUpdate(examps[seq[i]], params, m);
