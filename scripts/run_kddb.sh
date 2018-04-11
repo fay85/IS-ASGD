@@ -14,7 +14,7 @@ cp ../data/"$lip_file" ../data/kddb_prob_lip
 
 
 # SGD
-../bin/svm --splits 1 --stepinitial $ini_lr --step_decay $lrd --mu $m --epochs $ep --svrg 0 --shuffled 0 --CrossEntropy $4 --use_IS 0 --binary 0 ../SGD/kddb x
+../bin/svm --splits 1 --stepinitial $ini_lr --step_decay $lrd --mu $m --epochs $ep --svrg 0 --shuffled 0 --CrossEntropy $4 --use_IS 0 --binary 0 ../data/kddb x
 
 # ASGD standard
 ../bin/svm --splits $2 --stepinitial $ini_lr --step_decay $lrd --mu $m --epochs $ep --dis 1 --svrg 0 --shuffled 0 --CrossEntropy $4 --use_IS 0 --binary 0 ../data/kddb x
