@@ -20,6 +20,7 @@ copy these datasets to 'data' folder and unzip
 Use the run scripts in 'script' folder
 ### Example
 To run kddb with `lr=0.5` and `threads=44`
+
 `$2` -> threads_num
 
 `$3` -> lrate
@@ -39,7 +40,9 @@ Use the print scripts in 'script' folder, IS-ASGD shows better absolute converge
 and SVRG-ASGD in these large-scale sparse datasets due to sparsity.
 ### Example
 To print the results of kddb ran with lr=0.5 and threads=44
+
                     `dataset` `lr` `threads`
+                    
 ./print_iterative.py  kddb    0.5      44  
 
 ./print_absolute.py   kddb    0.5      44 
