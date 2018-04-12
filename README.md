@@ -18,10 +18,26 @@ copy these datasets to 'data' folder and unzip
 
 ## Run Command
 Use the run scripts in 'script' folder
+### Example
+To run kddb with `lr=0.5` and `threads=44`
+`$2` -> threads_num
+`$3` -> lrate
+`$4` -> lr_decay
+`$5` -> epoch_count
+`$6` -> 0=importance balanced
+`$7` -> using IS
+
+../bin/svm --splits $2 --stepinitial $3 --step_decay $4 --mu 0.00001 --epochs $5 --dis 1 --random_dis $6 --svrg 0 --CrossEntropy 1 --lip 1 --use_IS $7 --binary 0 ../data/kddb x
 
 ## Visualize the result
 Use the print scripts in 'script' folder, IS-ASGD shows better absolute convergence curve than ASGD
-and SVRG-ASGD in these large-scale sparse datasets due to sparsity. 
+and SVRG-ASGD in these large-scale sparse datasets due to sparsity.
+### Example
+To print the results of kddb ran with lr=0.5 and threads=44
+                    `dataset` `lr` `threads`
+./print_iterative.py  kddb    0.5      44  
+
+./print_absolute.py   kddb    0.5      44 
 
 ## Testbed
 Intel Xeon series is preferred since it has many cores, our testbed is
