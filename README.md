@@ -43,6 +43,13 @@ To print the results of kddb ran with lr=0.5 and threads=44
 Intel Xeon series is preferred since it has many cores, our testbed is
 a two-sockets server of Xeon-2699 V4 CPU.
 
+## Other Configuration
+1. We recommend to turn off hyper-threading, which is likely to be controlled in your BIOS.
+
+2. Using Intel g++, a.k.a, icpc is highly recommended. By using icpc, the scalability increases ~15%.
+
+3. Chech the OMP_THREADS_NUM in your environment.
+
 ## Thanks
 Jason.y.ye, Intel Asia Pacific R&D Ltd., Shanghai.
 Advanced Networking Lab, Shanghai Jiao Tong University, Shanghai.
