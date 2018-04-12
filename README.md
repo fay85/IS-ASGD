@@ -21,10 +21,15 @@ Use the run scripts in 'script' folder
 ### Example
 To run kddb with `lr=0.5` and `threads=44`
 `$2` -> threads_num
+
 `$3` -> lrate
+
 `$4` -> lr_decay
+
 `$5` -> epoch_count
+
 `$6` -> 0=importance balanced
+
 `$7` -> using IS
 
 ../bin/svm --splits $2 --stepinitial $3 --step_decay $4 --mu 0.00001 --epochs $5 --dis 1 --random_dis $6 --svrg 0 --CrossEntropy 1 --lip 1 --use_IS $7 --binary 0 ../data/kddb x
